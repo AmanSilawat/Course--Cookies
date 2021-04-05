@@ -17,7 +17,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 
 const pool = new pg.Pool({
-    "host": "husseinmac.local",
+    "host": "aman.local",
     "port": 5432,
     "user": "postgres",
     "password": "postgres",
