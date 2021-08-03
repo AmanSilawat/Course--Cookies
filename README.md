@@ -46,8 +46,9 @@
 
 ### SameSite
 
-    SameSite=None
-        A cookie with samesite=strict is never sent if the user comes from outside the same site.
+    SameSite=None    ----cross site attack
+        Cookies are allow to sent on normal cross-site.
+        this mean show when click another link to this site and cookie will be send.
 
     SameSite=Lax
         Cookies are not sent on normal cross-site.
@@ -57,8 +58,11 @@
         Cookies will only be sent in a first-party and not be sent third party websites.
         this mean does not show when click another link to this site and cookie will be not send.
 
+    SameSite: when not set this property
+        this equitant to Lax
+
 ## Cookie scope
-    coolies visible only this scope.
+    cookies visible only this scope.
 
     Domain
         syntal: `domain=domain_name`
